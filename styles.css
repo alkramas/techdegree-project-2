@@ -54,7 +54,7 @@ nav a {
   display: block;
   text-align: center;
   padding: 0.75em;
-  background-color: white;
+  background-color: lightgrey;
   margin: 0.5em 1em 0.5em 1em;
   color: #000;
   font-weight: bold;
@@ -85,4 +85,43 @@ img.profile-image {
   max-width: 230px;
   width: 33%;
   display: block;
+}
+
+
+/* Media Queries ------------- */
+@Media (max-width: 1024px) {
+  .profile-image {
+    float: right;
+  }
+  .flex-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  div.section {
+    width: 20%;
+    margin: 10px;
+  }
+}
+@Media (max-width: 768px) {
+  .flex {
+    flex: auto;
+  }
+  .profile-image {
+    float: none;
+  }
+  div.subsection {
+    width: 40%;
+    margin: 10px;
+  }
+}
+@Media (max-width: 360px) {
+    .flex-container {
+      flex-direction: column;
+    }
+    div.subsection {
+      width: 100%;
+      margin: 10px;
+    }
 }
