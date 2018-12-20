@@ -6,26 +6,31 @@ body {
   margin: 0;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
+  background-color: #ECECEC;
 }
 header {
-    background-color: #ECECEC;
-    padding: 1em 0 1em 0;
+  padding: 1em 0 1em 0;
+  overflow: auto;
 }
 footer {
-  background-color: #ECECEC;
   padding: 1em;
+}
+main {
+  padding: 0 15px;
+  background: #FFF;
 }
 h2 {
   font-size: 1.15em;
   font-weight: 700;
-  /* letter-spacing: 0.1em; */
+  padding: 1em 0 0 0;
 }
 h3 {
   font-size: 1.5em;
   font-weight: 400;
+  color: slategrey;
 }
 p {
-  padding: 0 15px;
+  padding: 0 1em;
 }
 .background {
   background-color: #ECECEC;
@@ -40,13 +45,6 @@ a:link, a:active, a:visited {
   text-decoration: none;
   color: #000;
 }
-
-
-/* main elements ----------- */
-.flex {
-  padding: 0 15px;
-}
-
 
 
 /* navigations ------------- */
@@ -89,39 +87,57 @@ img.profile-image {
 
 
 /* Media Queries ------------- */
-@Media (max-width: 1024px) {
-  .profile-image {
-    float: right;
+
+@Media (max-width: 360px) {
+  .flex-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
+  div.subsection {
+    width: 100%;
+  }
+}
+@Media (min-width: 768px) {
   .flex-container {
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  div.section {
-    width: 20%;
-    margin: 10px;
+  div.subsection {
+    width: calc(100%/2 - 0.5em);
   }
-}
-@Media (max-width: 768px) {
-  .flex {
-    flex: auto;
+  /* profile info and image */
+  .profile-info {
+    text-align: left;
   }
   .profile-image {
-    float: none;
+    float: right;
+    padding-right: 1em;
   }
-  div.subsection {
-    width: 40%;
-    margin: 10px;
+  /* space between subsections */
+  .flex-container div.subsection:nth-child(odd) {
+    margin: 0 1em 0 0;
+  }
+  .flex-container div.subsection:nth-child(even) {
+    margin: 0 0 0 0;
   }
 }
-@Media (max-width: 360px) {
-    .flex-container {
-      flex-direction: column;
-    }
-    div.subsection {
-      width: 100%;
-      margin: 10px;
-    }
+@Media (min-width: 1024px) {
+  div.subsection {
+    width: calc(100%/3 - 1em);
+    /* padding: 0 6px; */
+    margin: 0 auto;
+  }
+  section .subsection:only-child {
+    margin: auto;
+  }
+  /* space between subsections */
+  .flex-container div.subsection:nth-child(1), .flex-container div.subsection:nth-child(2), .flex-container div.subsection:nth-child(4), .flex-container div.subsection:nth-child(5) {
+    margin: 0 1em 0 0;
+  }
+  .flex-container div.subsection:nth-child(3), .flex-container div.subsection:nth-child(6) {
+    margin: 0 0 0 0;
+  }
 }
