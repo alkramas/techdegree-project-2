@@ -23,6 +23,9 @@ main {
   background: #FFF;
   overflow: auto;
 }
+h1 {
+  text-align: center;
+}
 h2 {
   font-size: 1.15em;
   font-weight: 700;
@@ -139,6 +142,18 @@ div.subsection {
   .flex-container div.subsection:nth-child(even) {
     margin: 0 0 0 0;
   }
+  nav {
+    text-align: center;
+  }
+  nav a {
+    display: inline-block;
+    background-color: initial;
+    margin: 0 0 1em 0;
+    padding: 0 1em;
+  }
+  nav a:hover {
+    background-color: initial;
+  }
 }
 
 @Media (min-width: 1024px) {
@@ -154,5 +169,32 @@ div.subsection {
   }
   .flex-container div.subsection:nth-child(3), .flex-container div.subsection:nth-child(6) {
     margin: 0 0 0 0;
+  }
+  nav {
+    text-align: right;
+    /* display: inline-block; */
+    float: right;
+    clear: right;
+  }
+  nav a {
+    display: inline-block;
+    background-color: initial;
+    margin: 0 0 1em 0;
+    padding: 0 1em;
+  }
+  nav a:hover {
+    background-color: initial;
+  }
+  h1 {
+    /* display: inline-block; */
+    margin: 0 0 0 1em;
+    width: 50%;
+    text-align: left;
+    float: left;
+    clear: left;
+  }
+  div.header-info-wrapper {
+    display: inline-block;
+    width: 100%;
   }
 }
