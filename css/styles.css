@@ -143,6 +143,7 @@ div.subsection {
   .flex-container div.subsection:nth-child(even) {
     margin: 0 0 0 0;
   }
+
   nav {
     text-align: center;
   }
@@ -173,7 +174,7 @@ div.subsection {
   }
   nav {
     text-align: right;
-    /* display: inline-block; */
+    margin: 1em 0 2em 0;
     float: right;
     clear: right;
   }
