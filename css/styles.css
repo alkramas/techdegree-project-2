@@ -84,6 +84,10 @@ nav {
 .footer-nav a:hover {
   color: darkgrey;
 }
+.fullwidth-only {
+  display: none;
+}
+
 
 /* images -------------------- */
 img.image-visuals {
@@ -198,5 +202,11 @@ div.subsection {
   div.header-info-wrapper {
     display: inline-block;
     width: 100%;
+  }
+  .mobile-only {
+    display: none;
+  }
+  .fullwidth-only {
+    display: inline-block;
   }
 }
