@@ -69,17 +69,22 @@ nav a:hover {
 nav {
   margin: 2em 0 2em 0;
 }
+.name {
+  display: inline-block;
+}
 .footer-nav {
     display: block;
     list-style-type: none;
     padding: 0;
+    float: right;
+    clear: both;
 }
 .footer-nav li {
   display: inline-block;
   font-weight: bold;
 }
 .footer-nav li:nth-child(2) {
-  float:right;
+  /* float:right; */
 }
 .footer-nav a:hover {
   color: darkgrey;
@@ -147,6 +152,9 @@ div.subsection {
   .flex-container div.subsection:nth-child(even) {
     margin: 0 0 0 0;
   }
+  .flex-container div.subsection:last-child {
+    margin: 0 auto;
+  }
 
   nav {
     text-align: center;
@@ -159,6 +167,14 @@ div.subsection {
   }
   nav a:hover {
     background-color: initial;
+  }
+  /* footer nav */
+  .mobile-only {
+    display: none;
+  }
+  .fullwidth-only {
+    display: inline-block;
+    padding: 0 0.5em;
   }
 }
 
@@ -193,7 +209,7 @@ div.subsection {
   }
   h1 {
     /* display: inline-block; */
-    margin: 0 0 0 1em;
+    margin: 0 0 0 16px;
     width: 50%;
     text-align: left;
     float: left;
@@ -202,11 +218,5 @@ div.subsection {
   div.header-info-wrapper {
     display: inline-block;
     width: 100%;
-  }
-  .mobile-only {
-    display: none;
-  }
-  .fullwidth-only {
-    display: inline-block;
   }
 }
